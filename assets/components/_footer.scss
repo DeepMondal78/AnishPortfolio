@@ -1,110 +1,3 @@
-// .footerSection {
-//     width: 100%;
-//     // height: 100%;
-//     padding: 2vw 4vw;
-
-//     .textC {
-//         width: 100%;
-//         display: flex;
-//         justify-content: flex-end;
-
-//         .textRotateCircle {
-//             position: relative;
-//             width: 6vw;
-//             height: 6vw;
-//             border: 1.5px solid $text-color;
-//             border-radius: 50%;
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-
-//             // Rotating Text Circle
-//             .circleTextSVG {
-//                 position: absolute;
-//                 width: 100%;
-//                 height: 100%;
-//                 padding: 0.2rem;
-//                 transform: rotate(0deg);
-//                 animation: rotateText 4s linear infinite;
-
-//                 text {
-//                     font-family: $p-fonts;
-//                     font-size: 1.5rem;
-//                     fill: $text-color;
-//                     letter-spacing: 1px;
-//                 }
-//             }
-
-//             // Inner Cat Icon Circle
-//             .innerCircle {
-//                 width: 4vw;
-//                 height: 4vw;
-//                 border: 1.5px solid $text-color;
-//                 background-color: $icon-color;
-//                 border-radius: 50%;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-
-//                 span {
-//                     font-size: 2vw;
-//                 }
-//             }
-//         }
-
-//         // Animation for spinning
-//         @keyframes rotateText {
-//             0% {
-//                 transform: rotate(0deg);
-//             }
-
-//             100% {
-//                 transform: rotate(360deg);
-//             }
-//         }
-//     }
-
-//     .footerContect {
-//         width: 100%;
-//         margin-top: 2vh;
-//         .footerHeading {
-//             width: 100%;
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-
-
-//             .f-contact,.f-location {
-//                 display: flex;
-//                 align-items: center;
-//                 flex-direction: column;
-//                 gap: 2vh;
-
-//                 a {
-//                     text-decoration: none;
-//                     font-family: $p-fonts;
-//                     color: $text-color;
-
-//                     i {
-//                         color: $icon-color;
-//                     }
-//                 }
-//             }
-//         }
-
-//         hr {
-//             margin-top: 2vh;
-//         }
-//     }
-
-// }
-
-// @media (max-width: 600px) {
-//     .footerHeading {
-//         flex-direction: column;
-//         gap: 2vh;
-//     }
-// }
 
 .footerSection {
     width: 100%;
@@ -176,6 +69,7 @@
             h3 {
                 font-family: $navmenu-fonts;
                 font-size: 2rem;
+                color: $text-color;
             }
 
             .f-contact,
