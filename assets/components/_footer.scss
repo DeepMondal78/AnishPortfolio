@@ -1,0 +1,250 @@
+// .footerSection {
+//     width: 100%;
+//     // height: 100%;
+//     padding: 2vw 4vw;
+
+//     .textC {
+//         width: 100%;
+//         display: flex;
+//         justify-content: flex-end;
+
+//         .textRotateCircle {
+//             position: relative;
+//             width: 6vw;
+//             height: 6vw;
+//             border: 1.5px solid $text-color;
+//             border-radius: 50%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+
+//             // Rotating Text Circle
+//             .circleTextSVG {
+//                 position: absolute;
+//                 width: 100%;
+//                 height: 100%;
+//                 padding: 0.2rem;
+//                 transform: rotate(0deg);
+//                 animation: rotateText 4s linear infinite;
+
+//                 text {
+//                     font-family: $p-fonts;
+//                     font-size: 1.5rem;
+//                     fill: $text-color;
+//                     letter-spacing: 1px;
+//                 }
+//             }
+
+//             // Inner Cat Icon Circle
+//             .innerCircle {
+//                 width: 4vw;
+//                 height: 4vw;
+//                 border: 1.5px solid $text-color;
+//                 background-color: $icon-color;
+//                 border-radius: 50%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+
+//                 span {
+//                     font-size: 2vw;
+//                 }
+//             }
+//         }
+
+//         // Animation for spinning
+//         @keyframes rotateText {
+//             0% {
+//                 transform: rotate(0deg);
+//             }
+
+//             100% {
+//                 transform: rotate(360deg);
+//             }
+//         }
+//     }
+
+//     .footerContect {
+//         width: 100%;
+//         margin-top: 2vh;
+//         .footerHeading {
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+
+
+//             .f-contact,.f-location {
+//                 display: flex;
+//                 align-items: center;
+//                 flex-direction: column;
+//                 gap: 2vh;
+
+//                 a {
+//                     text-decoration: none;
+//                     font-family: $p-fonts;
+//                     color: $text-color;
+
+//                     i {
+//                         color: $icon-color;
+//                     }
+//                 }
+//             }
+//         }
+
+//         hr {
+//             margin-top: 2vh;
+//         }
+//     }
+
+// }
+
+// @media (max-width: 600px) {
+//     .footerHeading {
+//         flex-direction: column;
+//         gap: 2vh;
+//     }
+// }
+
+.footerSection {
+    width: 100%;
+    padding: 2vw 4vw;
+
+    .textC {
+        display: flex;
+        justify-content: flex-end;
+
+        .textRotateCircle {
+            position: relative;
+            width: 6vw;
+            height: 6vw;
+            border: 1.5px solid $text-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .circleTextSVG {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform: rotate(0deg);
+                animation: rotateText 6s linear infinite;
+
+                text {
+                    font-family: $p-fonts;
+                    font-size: 1.1rem;
+                    fill: $text-color;
+                }
+            }
+
+            .innerCircle {
+                width: 4vw;
+                height: 4vw;
+                background-color: $icon-color;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    font-size: 1.8vw;
+                }
+            }
+        }
+
+        @keyframes rotateText {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .footerContect {
+        margin-top: 4vh;
+
+        .footerHeading {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+
+            h3 {
+                font-family: $navmenu-fonts;
+                font-size: 2rem;
+            }
+
+            .f-contact,
+            .f-location {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+
+                a {
+                    font-family: $p-fonts;
+                    color: $text-color;
+                    font-size: 1rem;
+                    text-decoration: none;
+
+                    i {
+                        margin-right: 0.5rem;
+                        color: $icon-color;
+                    }
+                }
+            }
+        }
+
+        hr {
+            margin-top: 3vh;
+            border: 1px solid $text-color;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2vh;
+
+            p {
+                font-family: $p-fonts;
+                font-size: 0.9rem;
+                color: $text-color;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 600px) {
+    .footerSection {
+        .textC {
+            justify-content: center;
+
+            .textRotateCircle {
+                width: 5.5rem;
+                height: 5.5rem;
+
+                .innerCircle {
+                    width: 3.5rem;
+                    height: 3.5rem;
+
+                    span {
+                        font-size: 4vw;
+                    }
+                }
+            }
+        }
+
+        .footerContect {
+            .footerHeading {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}

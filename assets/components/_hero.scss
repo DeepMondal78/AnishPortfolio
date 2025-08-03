@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'VarentGrotesk';
+  src: url('../fonts/VarentGrotesk-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.heroSection {
+  width: 100%;
+  padding: 9rem 4vw 0;
+  background-color: $bg-color;
+
+  .heroContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+
+    .heading {
+      flex: 1 1 60%;
+      text-align: center;
+
+      h1 {
+        width: 100%;
+        max-width: 1400px;
+        font-family: 'VarentGrotesk';
+        font-size: 8vw;
+        margin-bottom: 2rem;
+        color: $text-color;
+      }
+
+      p {
+        width: 100%;
+        max-width: 35vw;
+        font-family: $p-fonts;
+        font-size: 1.6vw;
+        margin: 0 auto;
+        color: $text-color;
+      }
+    }
+
+    .heroSection .heading h1 {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+
+      .char {
+        display: inline-block;
+        transform: translateY(100%);
+      }
+
+      .space {
+        display: inline-block;
+        width: 0.5em;
+      }
+    }
+
+
+    .heroImg {
+      flex: 1 1 30%;
+      width: 100%;
+      max-width: 20vw;
+      margin: 0 auto;
+    }
+  }
+
+  .button {
+    width: 100%;
+    max-width: 80vw;
+    margin: 3rem auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .connectBtn {
+      padding: 0.5vw 1.2vw;
+      background-color: transparent;
+      border: 2px solid $text-color;
+      color: $text-color;
+      border-radius: 1.5vw;
+      font-family: $p-fonts;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $icon-color;
+        color: #000;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .arrowBtn {
+      width: 4vw;
+      height: 4vw;
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 2.5vw;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $icon-color;
+        color: #000;
+        transition: all 0.4s ease;
+      }
+    }
+  }
+}
+
+.heroSection .heading p,
+.heroSection .heroImg,
+.heroSection .button {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.heroSection .heading p,
+.heroSection .heroImg,
+.heroSection .button {
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1); // smooth bounce-like
+  will-change: transform;
+}
+
+
+
+
+
+
+// =================== RESPONSIVE ===================
+@media (max-width: 668px) {
+  .heroSection {
+    padding: 8rem 4vw;
+
+    .heroContent {
+      flex-direction: column;
+
+      .heading {
+        h1 {
+          font-size: 4rem;
+        }
+
+        p {
+          max-width: 100%;
+          font-size: 1.5rem;
+          margin-top: 1rem;
+        }
+      }
+
+      .heroImg {
+        max-width: 60%;
+        margin-top: 2rem;
+      }
+    }
+
+    .button {
+      .arrowBtn {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// =================== SOCIAL ICON ===================
+.leftSocial {
+  position: fixed;
+  width: 3vw;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  background-color: #ffffff0a;
+  top: 30%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 0 1vw 1vw 0;
+  z-index: 1000;
+
+  a,
+  i {
+    text-decoration: none;
+    font-size: 1.8vw;
+    color: $icon-color;
+
+    &:hover {
+      color: $text-color;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.scroll-section {
+  position: relative;
+  overflow: visible;
+
+  @media (max-width: 768px) {
+    overflow: visible;
+    min-height: auto;
+    pointer-events: auto;
+  }
+}

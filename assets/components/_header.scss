@@ -1,0 +1,122 @@
+.navber {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 4vw;
+    top: 0;
+    left: 0;
+    // background-color: #fff;
+    box-shadow: 5px 5px 15px #00000086;
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+
+    .logo {
+        font-family: $logo-fonts;
+        color: $text-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .navicon {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        #cross {
+            display: none;
+        }
+    }
+}
+
+.navmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    overflow-x: hidden;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+
+    &.active {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    ul li {
+        list-style: none;
+
+        a {
+            display: inline-block;
+            font-family: $navmenu-fonts;
+            font-size: 5vw;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.5s ease-in-out;
+
+            &:hover {
+                transform: translateX(20%);
+            }
+        }
+    }
+
+
+    .navsocial {
+        .contact a {
+            font-size: 1rem;
+            text-decoration: none;
+            color: #fff;
+
+            i {
+                font-size: 1.5rem;
+                color: $icon-color;
+            }
+        }
+
+        .navlink {
+            margin-top: 2rem;
+
+            a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: #fff;
+
+                &:hover {
+                    color: $icon-color;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .navmenu {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        ul li a {
+            font-size: 4rem;
+        }
+    }
+}

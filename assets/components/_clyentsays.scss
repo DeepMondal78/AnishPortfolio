@@ -1,0 +1,120 @@
+// .clientSays {
+//     width: 100%;
+//     height: 100%;
+//     padding: 8vw 4vw;
+//     // background-color: beige;
+
+//     .clientText {
+//         h1 {
+//             font-family: $navmenu-fonts;
+//             font-size: 8vw;
+//             line-height: 85%;
+//         }
+//     }
+
+//     .clientCard {
+//         margin-top: 5vw;
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         gap: 2rem;
+
+//         .card1 {
+//             width: 50%;
+//             padding: 1rem;
+//             background-color: azure;
+//             border-radius: 1.5rem;
+           
+
+//             #user {
+//                 width: 3rem;
+//                 height: 3rem;
+//                 border-radius: 50%;
+//                 object-fit: cover;
+//             }
+//         }
+//     }
+// }
+
+
+// @media (max-width: 600px) {
+//     .clientSays {
+//         .clientText {
+//             h1 {
+//                 font-size: 3rem;
+//             }
+//         }
+//     }
+//     .clientCard {
+//         flex-direction: column;
+//         .card1 {
+//             min-width: 100%;
+//         }
+//     }
+// }
+
+.clientSays {
+    width: 100%;
+    padding: 8vw 4vw;
+
+    .clientText {
+        h1 {
+            font-family: $navmenu-fonts;
+            font-size: 8vw;
+            line-height: 0.85;
+            color: #fff;
+        }
+    }
+
+    .clientCard {
+        margin-top: 5vw;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .card1 {
+            // flex: 1 1 calc(45% - 1rem);
+            width: 25rem;
+            padding: 1.5rem;
+            background-color: azure;
+            border-radius: 1.5rem;
+            transition: transform 0.3s ease;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                font-family: $p-fonts;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .clientText h1 {
+            font-size: 3rem;
+        }
+
+        .clientCard {
+            flex-direction: column;
+            .card1 {
+                width: 21.5rem;
+            }
+        }
+    }
+
+}
