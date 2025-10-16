@@ -1,0 +1,67 @@
+.servicesSection {
+  width: 100%;
+  padding: 8vw 5vw;
+  background-color: $bg-color;
+  color: #fff;
+
+  .servicesHeader {
+    text-align: center;
+    margin-bottom: 6vw;
+
+    @font-face {
+        font-family: "SFPRODISPLAYMEDIUM";
+        src: url(/assets/fonts/SFPRODISPLAYMEDIUM.OTF);
+    }
+
+    h2 {
+      font-family: "SFPRODISPLAYMEDIUM";
+      font-size: 5vw;
+      font-weight: 700;
+      margin-bottom: 1vw;
+    }
+
+    p {
+      font-size: 1.5vw;
+      color: #ccc;
+    }
+  }
+
+  .servicesCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+
+    .serviceCard {
+      background: #1a1a1a;
+      border-radius: 1.5rem;
+      padding: 3rem 2rem;
+      width: 28rem;
+      min-height: 20rem;
+      text-align: center;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      cursor: default;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+      .icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+
+      &:hover {
+        transform: translateY(-1.5rem) scale(1.05);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}
