@@ -311,3 +311,39 @@ gsap.to(".rainbow-circle", {
     scrub: 1,
   }
 });
+
+
+document.querySelectorAll(".workCard").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.05)";
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)";
+  });
+});
+
+// YouTube IFrame API handling
+function onYouTubeIframeAPIReady() {
+  document.querySelectorAll(".videoBox iframe").forEach((iframe) => {
+    const player = new YT.Player(iframe, {
+      events: {
+        onReady: (event) => {
+          const videoBox = iframe.closest(".videoBox");
+
+          videoBox.addEventListener("mouseenter", () => {
+            event.target.mute();
+            event.target.playVideo();
+          });
+
+          videoBox.addEventListener("mouseleave", () => {
+            event.target.pauseVideo();
+          });
+
+          videoBox.addEventListener("click", () => {
+            event.target.unMute();
+          });
+        },
+      },
+    });
+  });
+}

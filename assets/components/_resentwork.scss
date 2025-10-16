@@ -25,6 +25,7 @@
       }
     }
 
+
     .recircle {
       width: 9vw;
       height: 9vw;
@@ -50,73 +51,47 @@
       font-size: 18vw;
       color: $text-color;
     }
+
   }
 
-  .resentVideo {
+ 
+
+  .resentwork {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+
+  .workCard {
+    width: 45rem;
+    height: 28rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
     position: relative;
-    width: 100%;
-    margin-top: 6vw;
-    height: auto;
-    min-height: 40vw;
+    background: #1a1a1a;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 
-    .video {
-      position: absolute;
-      width: 40vw;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
+    .videoBox {
+      width: 100%;
+      height: 100%;
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        object-fit: cover;
       }
     }
 
-    .v1 {
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    .v2 {
-      top: 3vw;
-      left: 18vw;
-      z-index: 2;
-    }
-
-    .v3 {
-      top: 6vw;
-      left: 35vw;
-      z-index: 3;
-    }
-
-    .v4 {
-      top: 9vw;
-      left: 52vw;
-      z-index: 4;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
     }
   }
+}
 
-  .resentWork {
-    width: 400vw;
-    height: 400vw;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background-color: transparent;
 
-    .thing {
-      position: absolute;
-      top: 25px;
-      left: 50%;
-      width: 200px;
-      height: 200px;
-      font-size: 28px;
-      color: white;
-      transform: translateX(-50%);
-    }
-  }
+  
 }
 
 .resentLastHeading {
